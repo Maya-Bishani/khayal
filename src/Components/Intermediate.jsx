@@ -1,6 +1,4 @@
 import { useState } from "react";
-import cement from "../assets/image/cement.svg";
-import arrow from "../assets/image/arrow.svg";
 import { IoIosArrowRoundBack} from "react-icons/io";
 import { IoIosArrowRoundDown } from "react-icons/io";
 import photo1 from "../assets/image/Packages/photo1.svg";
