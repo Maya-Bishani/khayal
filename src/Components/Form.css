@@ -1,0 +1,134 @@
+/* تخصيص تقويم react-datepicker 
+.custom-calendar .react-datepicker__navigation {
+    top: 13% !important; 
+    transform: translateY(-50%) !important;
+  }
+  
+  .custom-calendar .react-datepicker__navigation--previous,
+  .custom-calendar .react-datepicker__navigation--next {
+    top: 13% !important; 
+  }*/
+.custom-calendar {
+    background-color: #2A2A2A !important;
+    border: 1px solid #21B7A6 !important;
+    border-radius: 0.5rem !important;
+    color: #fff !important;
+    font-size: 14px;
+  }
+  
+  .custom-calendar .react-datepicker__header {
+    background-color: #2D2D2D !important;
+    border-bottom: 1px solid #21B7A6 !important;
+    color: #fff !important;
+  }
+  
+  /* الأرقام العادية */
+  .custom-calendar .react-datepicker__day,
+  .custom-calendar .react-datepicker__time-list-item {
+    color: #fff !important;
+    background-color: transparent !important;
+  }
+  
+  /* hover */
+  .custom-calendar .react-datepicker__day:hover,
+  .custom-calendar .react-datepicker__time-list-item:hover {
+    background-color: #21B7A6 !important;
+    color: #fff !important;
+    border-radius: 0.25rem;
+  }
+  
+  .custom-calendar .react-datepicker__day--selected,
+  .custom-calendar .react-datepicker__time-list-item--selected,
+  .custom-calendar .react-datepicker__day--keyboard-selected {
+    background-color: #21B7A6 !important;
+    color: #fff !important; 
+    border-radius: 0.25rem;
+  }
+  
+  /* خلفية قائمة الوقت */
+  .custom-calendar .react-datepicker__time-container,
+  .custom-calendar .react-datepicker__time-list {
+    background-color: #2A2A2A !important;
+    border-left: 1px solid #21B7A6 !important;
+  }
+  
+  .custom-popper {
+    z-index: 10;
+  }
+  /* الأسهم بشكل افتراضي */
+.custom-calendar .react-datepicker__navigation {
+    top: 13% !important;
+    transform: translateY(-50%) !important;
+  }
+  
+  /* الأسهم prev/next */
+  .custom-calendar .react-datepicker__navigation--previous,
+  .custom-calendar .react-datepicker__navigation--next {
+    top: 13% !important;
+  }
+  /* scrollbar للقائمة الوقت */
+.custom-calendar .react-datepicker__time-list::-webkit-scrollbar {
+    width: 8px; /* عرض السكروول */
+  }
+  
+  .custom-calendar .react-datepicker__time-list::-webkit-scrollbar-track {
+    background: #1a1a1a; /* رمادي غامق بدل الأسود */
+    border-radius: 4px;
+  }
+  
+  .custom-calendar .react-datepicker__time-list::-webkit-scrollbar-thumb {
+    background-color: #21B7A6; /* الأخضر */
+    border-radius: 4px;
+    border: 2px solid #2A2A2A; /* ليتناسب مع الخلفية */
+  }
+  
+  /* لنفس النمط، لو عندك scrollbar للشهر */
+  .custom-calendar .react-datepicker__month-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .custom-calendar .react-datepicker__month-container::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 4px;
+  }
+  
+  .custom-calendar .react-datepicker__month-container::-webkit-scrollbar-thumb {
+    background-color: #21B7A6;
+    border-radius: 4px;
+    border: 2px solid #2A2A2A;
+  }
+  
+  @media (max-width: 450px) {
+    .custom-calendar .react-datepicker__navigation {
+      top: 20% !important;
+    }
+    .custom-calendar .react-datepicker__navigation--previous,
+    .custom-calendar .react-datepicker__navigation--next {
+      top: 20% !important;
+    }
+  
+    /* الاسهم*/
+    .custom-calendar .react-datepicker__navigation--previous {
+      left: 5px !important;
+      right: auto !important;
+    }
+    .custom-calendar .react-datepicker__navigation--next {
+      right: 20px !important; 
+      left: auto !important;
+    }
+    .custom-calendar .react-datepicker__navigation {
+        top: 7% !important; 
+      }
+      .custom-calendar .react-datepicker__navigation--previous,
+      .custom-calendar .react-datepicker__navigation--next {
+        top: 7% !important;
+      }
+      .custom-popper {
+        left: 50% !important;       /* مركز أفقياً */
+        transform: translateX(-50%) !important; /* تحريك منتصف المنبثق ليطابق المنتصف */
+      }
+
+  }
+  
+  
+  

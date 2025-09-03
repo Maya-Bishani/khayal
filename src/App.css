@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+.cutstom-bg{
+    background-image: url(../src/assets/image/background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 185vh;
+    overflow: hidden;
+
+}
+.border-nav{
+    border-bottom: 1px solid rgba(255,255,255,0.2) ;
+}
+.form-background{
+    background-color: rgba(255, 255, 255, 0.05);
+}
+input::placeholder{
+   
+    color:"white" !important ;
+    opacity: 60%;
+}
+.letter-space{
+    letter-spacing: -1%;
+
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+  @media (max-width: 500px) {
+    .cutstom-bg {
+      background-image: url(../src/assets/image/backgroundsm.svg);
+    }
+  }
+  
+ 
+  
+
