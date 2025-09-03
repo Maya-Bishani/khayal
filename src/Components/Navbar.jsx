@@ -27,7 +27,7 @@ export default function Navbar() {
         scrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="px-4 sm:px-16 flex justify-between items-center py-4 relative">
+      <div className="px-4 sm:px-16 flex justify-center  items-center py-4 relative">
         {/* الزر الأخضر للشاشات الكبيرة */}
         <a href="#packages"
           className={`rounded-4xl  hover:bg-[#1fa094] w-72 py-3.5 justify-center items-center text-base font-normal border hidden lg:flex ${
@@ -43,7 +43,7 @@ export default function Navbar() {
         </a>
 
         {/* اللوغو */}
-        <div className="flex-1 flex justify-center">
+        <div className="flex-1 flex justify-center lg:-ml-20 ">
           <img
             src={logo}
             alt="logo" 
@@ -80,12 +80,7 @@ export default function Navbar() {
             scrolled ? "text-black" : "text-white"
           }`}
         >
-          <a href="https://khialdevelopment.com/property-category/apartment" className="hover:text-[#21B7A6]">
-            للبيع
-          </a>
-          < a href ="https://khialdevelopment.com/property-category/apartment" className="hover:text-[#21B7A6]">
-            للأجار
-          </a>
+          
           <a href="#packages" className="hover:text-[#21B7A6]">
             أعمال التشطيب
           </a>
@@ -96,22 +91,6 @@ export default function Navbar() {
       {menuOpen && (
         <div className="lg:hidden absolute top-full right-0 w-full z-40">
           <div className="bg-white flex flex-col text-lg font-normal text-[#21B7A6] pb-7">
-            <a href="https://khialdevelopment.com/property-category/apartment"
-              onClick={() => setMenuOpen(false)}
-              className="w-full py-7 pr-6 relative text-right hover:bg-[#21B7A6] hover:text-white"
-            >
-              للبيع
-              <div className="h-[0.9px] w-full bg-gradient-to-l from-[#21B7A6] to-transparent absolute bottom-0 right-0"></div>
-            </a>
-
-            <a href="https://khialdevelopment.com/property-category/apartment"
-              to="/"
-              onClick={() => setMenuOpen(false)}
-              className="w-full py-7 pr-6 relative text-right  hover:bg-[#21B7A6] hover:text-white"
-            >
-              للأجار
-              <div className="h-[0.9px] w-full bg-gradient-to-l from-[#21B7A6] to-transparent absolute bottom-0 right-0"></div>
-            </a>
 
             <a href="#packages"
               onClick={() => setMenuOpen(false)}

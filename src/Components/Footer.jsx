@@ -34,9 +34,9 @@ export default function Footer(){
                     <Link to="https://www.instagram.com/khialdevelopment?igsh=MWZqMG9oaGpyMnZhag==" className="bg-white text-lg text-[#21B7A6] rounded-full p-2 flex items-center justify-center transition-transform duration-300 hover:bg-[#21B7A6] hover:text-white">
                             <FaInstagram />
                     </Link>
-                    <Link to="https://api.whatsapp.com/send/?phone=201028264763&amp;type=phone_number&amp;app_absent=0" className="bg-white text-lg text-[#21B7A6] rounded-full p-2 flex items-center justify-center transition-transform duration-300 hover:bg-[#21B7A6] hover:text-white">
+                    <a href="https://wa.me/201554330399" target="_blank" rel="noopener noreferrer" className="bg-white text-lg text-[#21B7A6] rounded-full p-2 flex items-center justify-center transition-transform duration-300 hover:bg-[#21B7A6] hover:text-white">
                             <FaWhatsapp />
-                     </Link>
+                     </a>
                      <a href="tel:+201554330399" className="bg-white text-lg text-[#21B7A6] rounded-full p-2 flex items-center justify-center transition-transform duration-300 hover:bg-[#21B7A6] hover:text-white">
                           <IoCallOutline />
                     </a>
@@ -57,8 +57,6 @@ export default function Footer(){
                          <div className="flex flex-col space-y-3 pr-2.5 md:pr-0  w-40">
                             <p className="font-medium text-base md:text-2xl  ">الصفحات</p>
                             <a href="#packages" className="font-normal text-xs md:text-base tracking-tight hover:text-[#21B7A6]">أعمال التشطيب</a>
-                            <a href="https://khialdevelopment.com/property-category/apartment" className="font-normal text-xs md:text-base tracking-tight hover:text-[#21B7A6]">بيع العقارات</a>
-                            <a href="https://khialdevelopment.com/property-category/apartment"  className="font-normal text-xs md:text-base tracking-tight hover:text-[#21B7A6] ">إيجار العقارات</a>
                         </div>
                         {/* قسم التواصل */}
                         <div className="space-y-4 text-xs md:text-base">
@@ -77,7 +75,7 @@ export default function Footer(){
                                 </div>
                                 <div className="flex items-center gap-2  font-normal text-xs md:text-base">
                                     <img src={call} alt="phone" className="w-6"/>
-                                    <a href="tel:+96551675316" dir="ltr" className="hover:text-[#21B7A6]">+965 516 75316</a>
+                                    <a href="tel:+201554330399" dir="ltr" className="hover:text-[#21B7A6]">+201554330399</a>
                                </div>
                            </div>
                         </div>

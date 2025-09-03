@@ -4,6 +4,7 @@ import form from "../assets/image/form.svg";
 import calendar from "../assets/image/calendar.svg"; 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useRef, useEffect } from "react";
 
 export default function Form() {
   const [name, setName] = useState("");
@@ -11,45 +12,74 @@ export default function Form() {
   const [unit, setUnit] = useState("");
   const [preferredTime, setPreferredTime] = useState(null);
   const [message, setMessage] = useState("");
+const plans = [
+    "باقة التوفير",
+    "الباقة الاقتصادية",
+     "الباقة المتوسطة",
+    "باقة خيال",
+    "باقة Vip",
+    "باقة Vip_U",
+    "باقة Vip_SU",
+  ]
+  const [selectedPlan, setSelectedPlan] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
+  // إغلاق القائمة إذا ضغط المستخدم خارجها
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!name || !phone || !unit || !message) {
+    if (!name || !phone || !unit || !message || !selectedPlan) {
       alert("يرجى ملء جميع الحقول المطلوبة!");
       return;
     }
-
+  
     const phoneNumber = "201554330399";
-
+  
     const formattedTime = preferredTime
-      ? preferredTime.toLocaleString("ar-SY", {
-          weekday: "long",
-          hour: "2-digit",
-          minute: "2-digit",
-        })
-      : "غير محدد";
-
+    ? preferredTime.toLocaleString("ar-SY", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      })
+    : "غير محدد";
+  
+  
     const text = `━━━━━━━━━━━━━━━━━━━━━━
-                 📌طلب جديد من الموقع
-                 ━━━━━━━━━━━━━━━━━━━━━━━
-                👤 الاسم: ${name}
-                📞 الهاتف: ${phone}
-                📍 عنوان الوحدة: ${unit}
-                ⏰ الوقت المفضل للتواصل: ${formattedTime}
-                💬 الرسالة: 
-                ${message}
-          ━━━━━━━━━━━━━━━`;
-
+  📌 طلب جديد من الموقع
+  ━━━━━━━━━━━━━━━━━━━━━━━
+  👤 الاسم: ${name}
+  📞 الهاتف: ${phone}
+  📍 عنوان الوحدة: ${unit}
+  📦 الباقة: ${selectedPlan}
+  ⏰ الوقت المفضل للتواصل: ${formattedTime}
+  💬 الرسالة: 
+  ${message}
+  ━━━━━━━━━━━━━━━━━━━━━━`;
+  
     const encodedText = encodeURIComponent(text);
     const url = `https://wa.me/${phoneNumber}?text=${encodedText}`;
     window.open(url, "_blank", "noopener,noreferrer");
-
+  
     setName("");
     setPhone("");
     setUnit("");
+    setSelectedPlan("");
     setPreferredTime(null);
     setMessage("");
   };
+  
 
   const handlePhoneChange = (e) => {
     const value = e.target.value.replace(/[^\d+.]/g, "");
@@ -119,6 +149,38 @@ export default function Form() {
               />
             </div>
           </div>
+          {/* الباقة المناسبة */}
+          <div className="w-full flex flex-col relative" ref={dropdownRef}>
+             <label className="mb-2.5 text-white text-sm md:text-base font-normal">
+                 الباقة المناسبة لك
+            </label>
+
+               <div className="w-full bg-[#2A2A2A] border border-[#FFFFFF33] rounded-md py-3.5 pr-3.5 text-right cursor-pointer flex justify-between items-center"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                 <span className={selectedPlan ? "text-white" : "opacity-60"}>
+                   {selectedPlan || "اختر الباقة التي تناسبك"}
+                 </span>
+                <span className="ml-2 transform transition-transform duration-200" style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>▼</span>
+             </div>
+
+            {isOpen && (
+              <ul className="absolute top-full mt-1 w-full bg-[#2A2A2A] rounded-md shadow-lg text-white z-20">
+              {plans.map((plan, idx) => (
+              <li
+               key={idx}
+              className="py-2 px-3 cursor-pointer hover:bg-[#21B7A6] hover:text-black transition-colors duration-200"
+              onClick={() => {
+              setSelectedPlan(plan);
+              setIsOpen(false);
+              }}
+              >
+          {plan}
+        </li>
+               ))}
+           </ul>
+          )}
+    </div>
            {/* الوقت المفضل للتواصل */}
           <div className="flex flex-col md:flex-row-reverse gap-5 w-full md:w-[583px]">
              <div className="w-full flex flex-col">
