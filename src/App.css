@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .cutstom-bg{
-    background-image: url(../src/assets/image/background.svg);
+    background-image: url(../src/assets/image/imagewebp//background.webp);
     background-size: cover;
     background-repeat: no-repeat;
     height: 185vh;
@@ -29,7 +29,7 @@ html {
 
   @media (max-width: 500px) {
     .cutstom-bg {
-      background-image: url(../src/assets/image/backgroundsm.svg);
+      background-image: url(../src/assets/image/imagewebp/b3.webp);
     }
   }
   

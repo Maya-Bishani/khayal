@@ -2,7 +2,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import arrows from "../assets/image/arrows.svg";
 export default function Hero() {
   return (
-    <div className="pt-56 flex flex-col text-white justify-center items-center space-y-7 z-1 px-4 sm:px-8 md:px-16 lg:px-36 xl:px-64">
+    <div className="pt-40 md:pt-48 flex flex-col text-white justify-center items-center space-y-7 z-1 px-4 sm:px-8 md:px-16 lg:px-36 xl:px-64">
       <p className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl max-w-full leading-11 lg:leading-[90px] md:max-w-[851px] text-center">
         اقتني منزل أحلامك مع خيال
       </p>

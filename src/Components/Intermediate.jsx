@@ -1,4 +1,7 @@
 import photo1 from "../assets/image/Packages/photo1.svg";
+import photo_1 from "../assets/image/imagewebp/photo_1.webP";
+import photo_2 from "../assets/image/imagewebp/photo_2.webP";
+import photo_3 from "../assets/image/imagewebp/photo_3.webP";
 import photo2 from "../assets/image/Packages/photo2.svg";
 import photo3 from "../assets/image/Packages/photo3.svg";
 import helmet from "../assets/image/Packages/helmet.svg";
@@ -63,9 +66,9 @@ export default function Intermediate({ index, openIndex, setOpenIndex }) {
         <div className="px-10">
           {/* الصور */}
           <div className="flex flex-col items-center lg:items-start justify-center gap-3 flex-wrap lg:flex-row my-6">
-            <img src={photo1} className="w-full max-w-[400px] object-contain" alt="photo1" />
-            <img src={photo2} className="w-full max-w-[400px] object-contain" alt="photo2" />
-            <img src={photo3} className="w-full max-w-[400px] object-contain" alt="photo3" />
+            <img src={photo_1} className="w-full max-w-[400px] object-contain" alt="photo1" />
+            <img src={photo_2} className="w-full max-w-[400px] object-contain" alt="photo2" />
+            <img src={photo_3} className="w-full max-w-[400px] object-contain" alt="photo3" />
           </div>
 
           {/* أعمال الكهرباء */}

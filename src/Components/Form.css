@@ -83,7 +83,6 @@
     border: 2px solid #2A2A2A; 
   }
   
-  /* لنفس النمط، لو عندك scrollbar للشهر */
   .custom-calendar .react-datepicker__month-container::-webkit-scrollbar {
     width: 8px;
   }

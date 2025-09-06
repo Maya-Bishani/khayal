@@ -52,15 +52,13 @@ export default function Navbar() {
             }`}
           />
         </div>
-
-        {/* أيقونة الهامبرغر */}
       {/* أيقونة الهامبرغر / الإغلاق */}
-<div className="lg:hidden flex-none z-50 ml-4 sm:ml-0">
-  <button
-    aria-label={menuOpen ? "إغلاق القائمة" : "فتح القائمة"}
-    onClick={() => setMenuOpen(!menuOpen)}
-    className="w-12 h-12 flex items-center justify-center rounded-full border border-white bg-[#21B7A6] transition-colors duration-300"
-  >
+     <div className="lg:hidden flex-none z-50 ml-4 sm:ml-0">
+         <button
+             aria-label={menuOpen ? "إغلاق القائمة" : "فتح القائمة"}
+             onClick={() => setMenuOpen(!menuOpen)}
+             className="w-12 h-12 flex items-center justify-center rounded-full border border-white bg-[#21B7A6] transition-colors duration-300"
+          >
     {menuOpen ? (
       <HiOutlineX className="text-white text-2xl" />
     ) : (

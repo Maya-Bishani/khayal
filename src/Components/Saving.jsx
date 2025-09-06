@@ -4,7 +4,9 @@ import photo3 from "../assets/image/Packages/photo3.svg";
 import helmet from "../assets/image/Packages/helmet.svg";
 import verify from "../assets/image/Packages/verify.svg";
 import stars from "../assets/image/Packages/stars.svg";
-import gift from"../assets/image/Packages/gift.svg";
+import photo_1 from "../assets/image/imagewebp/photo_1.webP";
+import photo_2 from "../assets/image/imagewebp/photo_2.webP";
+import photo_3 from "../assets/image/imagewebp/photo_3.webP";
 import { IoIosArrowRoundBack, IoIosArrowRoundDown } from "react-icons/io";
 
 export default function Saving({ index, openIndex, setOpenIndex }) {
@@ -70,11 +72,10 @@ export default function Saving({ index, openIndex, setOpenIndex }) {
         <div className="px-10">
           {/* الصور */}
           <div className="flex flex-col items-center lg:items-start justify-center gap-3 flex-wrap lg:flex-row my-6">
-            <img src={photo1} className="w-full max-w-[400px] object-contain" alt="photo1" />
-            <img src={photo2} className="w-full max-w-[400px] object-contain" alt="photo2" />
-            <img src={photo3} className="w-full max-w-[400px] object-contain" alt="photo3" />
+            <img src={photo_1} className="w-full max-w-[400px] object-contain" alt="photo1" />
+            <img src={photo_2} className="w-full max-w-[400px] object-contain" alt="photo2" />
+            <img src={photo_3} className="w-full max-w-[400px] object-contain" alt="photo3" />
           </div>
-
           {/* أعمال الكهرباء */}
           <div className="px-10">
             <p className="text-white font-medium text-base md:text-3xl">أعمال الكهرباء</p>

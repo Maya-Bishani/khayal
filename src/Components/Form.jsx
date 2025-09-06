@@ -1,6 +1,7 @@
 import './form.css'
 import { useState } from "react";
 import form from "../assets/image/form.svg";
+import form_1 from "../assets/image/form.svg";
 import calendar from "../assets/image/calendar.svg"; 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -158,9 +159,12 @@ const plans = [
                <div className="w-full bg-[#2A2A2A] border border-[#FFFFFF33] rounded-md py-3.5 pr-3.5 text-right cursor-pointer flex justify-between items-center"
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                 <span className={selectedPlan ? "text-white" : "opacity-60"}>
-                   {selectedPlan || "اختر الباقة التي تناسبك"}
-                 </span>
+              <span className={`${
+                   selectedPlan ? "text-white" : "opacity-60"} text-xs md:text-sm`}
+               >
+  {selectedPlan || "اختر الباقة التي تناسبك"}
+</span>
+
                 <span className="ml-2 transform transition-transform duration-200" style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>▼</span>
              </div>
 
@@ -233,11 +237,10 @@ const plans = [
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
-                className="opacity-60 w-full font-normal placeholder:text-white text-xs md:text-sm bg-[#2A2A2A] border border-[#FFFFFF33] rounded-md pr-6 pt-3.5 h-32 resize-none placeholder:text-right focus:outline-none focus:border-[#21B7A6] focus:ring-1 focus:ring-[#21B7A6]"
+                className=" w-full font-normal placeholder:text-white placeholder:opacity-60 text-xs md:text-sm bg-[#2A2A2A] border border-[#FFFFFF33] rounded-md pr-6 pt-3.5 h-32 resize-none placeholder:text-right focus:outline-none focus:border-[#21B7A6] focus:ring-1 focus:ring-[#21B7A6]"
               ></textarea>
             </div>
           </div>
-
           {/* زر الإرسال */}
           <button
             type="submit"
@@ -249,7 +252,7 @@ const plans = [
       </div>
       <div className="mt-auto lg:mt-0 lg:self-end">
         <img
-          src={form}
+          src={form_1}
           className="w-[255px] sm:w-[400px] md:w-[500px] lg:w-[661px] h-auto"
           alt="photo"
         />
